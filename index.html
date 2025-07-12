@@ -297,13 +297,12 @@
               <div class="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 mx-auto lg:mx-0 relative">
                 <div class="w-full h-full rounded-full bg-gradient-to-br from-brand-500 to-purple-600 p-1 shadow-2xl">
                   <div class="w-full h-full rounded-full bg-gray-900 flex items-center justify-center overflow-hidden">
-                    <!-- Replace this div with your actual image -->
-                    <div class="w-full h-full bg-gradient-to-br from-gray-700 to-gray-800 flex items-center justify-center">
+                    <!-- Profile Photo - Replace with your actual image -->
+                    <img src="images/my_pic.jpg" alt="Salmanul Faris" class="w-full h-full object-cover rounded-full" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <!-- Fallback icon if image fails to load -->
+                    <div class="w-full h-full bg-gradient-to-br from-gray-700 to-gray-800 flex items-center justify-center" style="display: none;">
                       <i data-lucide="user" class="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 text-gray-400"></i>
                     </div>
-                    <!-- Uncomment and replace with your image:
-                    <img src="path-to-your-image.jpg" alt="Salmanul Faris" class="w-full h-full object-cover rounded-full">
-                    -->
                   </div>
                 </div>
                 <!-- Decorative Elements -->
@@ -333,9 +332,10 @@
                 <div class="w-12 h-12 bg-gradient-to-br from-brand-500 to-purple-600 rounded-xl flex items-center justify-center">
                   <i data-lucide="target" class="w-6 h-6 text-white"></i>
                 </div>
-                <h4 class="text-xl font-semibold text-white">Personal Touch</h4>
+                <h4 class="text-xl font-semibold text-white">Dedicated Management</h4>
               </div>
-              <p class="text-gray-300">Every campaign is personally managed by me, ensuring you get direct access to strategy decisions and real-time optimizations.</p>
+              <p class="text-gray-300">
+                Every campaign is managed by our team, ensuring you have direct access to strategy decisions and real-time optimizations.</p>
             </div>
             
             <div class="bg-gray-900/60 rounded-2xl p-6 border border-gray-800 backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300">
