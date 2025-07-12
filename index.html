@@ -102,6 +102,10 @@
           <i data-lucide="mail" class="w-4 h-4"></i>
           <span class="hidden lg:inline">Contact</span>
         </a>
+        <a href="#pricing" class="hover:text-brand-400 text-gray-400 transition-all duration-300 flex items-center gap-2 hover:scale-105 hover:bg-gray-800/30 px-3 py-2 rounded-lg">
+          <i data-lucide="credit-card" class="w-4 h-4"></i>
+          <span class="hidden lg:inline">Pricing</span>
+        </a>
       </nav>
       
       <div class="flex items-center gap-2 lg:gap-4">
@@ -142,23 +146,6 @@
              കേരളത്തിലെ ചെറുബിസിനസുകൾക്ക് സഹായമാകുന്നു.  
           <span class="text-white font-medium hover:text-brand-400 transition-colors duration-300 cursor-default">Meta Ads, Instagram Growth, Local Targeting – ഞങ്ങളുണ്ട് കൂടെ!</span>
         </p>
-
-        <!-- Stats -->
-        <div class="animate-fade-in-up animate-delay-500 flex flex-wrap items-center justify-center gap-4 lg:gap-8 mt-8 text-sm text-gray-400">
-          <div class="flex items-center gap-2 hover:text-green-400 transition-all duration-300 hover:scale-110">
-            <span>Results from Day One</span>
-            <i data-lucide="rocket" class="w-4 h-4 text-green-400"></i>
-          </div>
-          <div class="flex items-center gap-2 hover:text-blue-400 transition-all duration-300 hover:scale-110">
-            <span>Low Budget, High Impact</span>
-            <i data-lucide="activity" class="w-4 h-4 text-blue-400"></i>
-          </div>
-          <div class="flex items-center gap-2 hover:text-purple-400 transition-all duration-300 hover:scale-110">
-            <span>Easy Campaign Management</span>
-            <i data-lucide="settings" class="w-4 h-4 text-purple-400"></i>
-          </div>
-        </div>
-
         <!-- CTA Form -->
         <div class="animate-slide-up animate-delay-600 mx-auto mt-10 lg:mt-12 max-w-md lg:max-w-2xl">
           <form class="flex flex-col mx-auto p-3 sm:flex-row gap-3 lg:gap-4">
@@ -170,195 +157,206 @@
               <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"></i>
             </a>
           </form>
-          <p class="mt-4 text-xs lg:text-sm text-gray-500 flex flex-wrap items-center justify-center gap-4">
-            <span class="flex items-center gap-1 hover:text-green-400 transition-colors duration-300">
-              <i data-lucide="check" class="w-3 h-3 text-green-400"></i>
-              No credit card required
-            </span>
-            <span class="flex items-center gap-1 hover:text-blue-400 transition-colors duration-300">
-              <i data-lucide="calendar" class="w-3 h-3 text-blue-400"></i>
-              14-day free trial
-            </span>
-            <span class="flex items-center gap-1 hover:text-purple-400 transition-colors duration-300">
-              <i data-lucide="users" class="w-3 h-3 text-purple-400"></i>
-              Free for teams under 10
-            </span>
-          </p>
         </div>
-
+    </section>
+    
+    <!-- Pricing Section -->
+    <section id="pricing" class="relative bg-gray-950 px-4 sm:px-6 lg:px-8 py-16 lg:py-24 border-t border-gray-800/50">
+      <!-- Background Elements -->
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-brand-900/10 via-transparent to-transparent"></div>
+      <div class="absolute top-1/4 left-1/4 w-32 h-32 sm:w-48 sm:h-48 lg:w-64 lg:h-64 bg-brand-500/5 rounded-full blur-3xl animate-pulse"></div>
+      <div class="absolute bottom-1/4 right-1/4 w-32 h-32 sm:w-48 sm:h-48 lg:w-64 lg:h-64 bg-purple-500/5 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+      
+      <div class="relative z-10 max-w-6xl mx-auto text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold font-satoshi text-white mb-4 animate-fade-in-up animate-delay-200">Choose your Plan</h2>
         <!-- Interactive Demo Cards -->
-        <div class="mt-16 lg:mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 max-w-6xl mx-auto">
+        <div class="mt-12 lg:mt-16 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Starter Plan -->
+          <div class="animate-fade-in-left animate-delay-400 group 
+          hover-lift hover:border-green-500/30 transition-all 
+          duration-500 hover:shadow-2xl hover:shadow-green-500/20 
+          text-left border border-gray-700/50 rounded-2xl p-6 
+          backdrop-blur-sm bg-gray-900/30 hover:bg-gray-900/50 flex flex-col">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-xl font-bold text-white font-satoshi">Starter</h3>
+              <span class="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded-full">Perfect for small/local businesses starting digital ads</span>
+            </div>
+            <div class="text-4xl font-extrabold text-brand-400 mb-2 font-satoshi">₹2,999<span class="text-base font-medium text-gray-400">/mo</span></div>
+            <p class="text-gray-400 mb-6">Perfect for small businesses starting with digital ads</p>
+            <ul class="text-left space-y-3 mb-8">
+              <li class="flex items-center gap-2 text-gray-200"><i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i>  Meta (Facebook & Instagram) Ads Setup</li>
+              <li class="flex items-center gap-2 text-gray-200"><i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i> Basic Audience Targeting</li>
+              <li class="flex items-center gap-2 text-gray-200"><i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i> Basic Analytics Dashboard (monthly)</li>
+              <li class="flex items-center gap-2 text-gray-200"><i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i> WhatsApp Support</li>
+            </ul>
+            <a href="#contact" class="mt-auto flex justify-center mx-auto w-full py-3 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-semibold transition-all duration-300 shadow hover:shadow-brand-500/30 hover:scale-105"><p>Choose Starter</p></a>
+          </div>
           
-          <!-- Slack Integration Card -->
-          <div class="animate-fade-in-left animate-delay-700 group hover-lift hover:border-green-500/30 transition-all duration-500 hover:shadow-2xl hover:shadow-green-500/20 text-left border border-gray-700/50 rounded-2xl p-6 backdrop-blur-sm bg-gray-900/30 hover:bg-gray-900/50">
-            <div class="flex items-center justify-between mb-6">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <i data-lucide="hash" class="w-5 h-5 text-white"></i>
-                </div>
-                <div>
-                  <h3 class="font-semibold text-white group-hover:text-green-400 transition-colors duration-300">Slack</h3>
-                  <p class="text-xs text-gray-400">#product-updates</p>
-                </div>
-              </div>
-              <div class="flex items-center gap-1">
-                <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                <span class="text-xs text-green-400 font-medium">Live</span>
-              </div>
+          <!-- Growth Plan (Highlighted) -->
+          <div class="relative flex flex-col border-2 border-brand-500 bg-gradient-to-b from-brand-600/80 to-purple-800/80 p-8 text-center rounded-2xl shadow-2xl scale-105 z-10 animate-fade-in-up animate-delay-300">
+            <span class="absolute -top-5 left-1/2 -translate-x-1/2 bg-brand-500 text-white text-xs font-bold px-4 py-1 rounded-full shadow-lg tracking-wide">Most Popular</span>
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-xl font-bold text-white font-satoshi">Growth</h3>
+              <span class="text-xs bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded-full">Best Value</span>
             </div>
-            
-            <div class="space-y-3">
-              <div class="flex gap-3 bg-gray-700/20 border border-gray-800 rounded-lg p-3 hover:bg-gray-700/30 hover:border-gray-700 transition-all duration-300">
-                <div class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span class="text-xs font-bold text-white">M</span>
-                </div>
-                <div class="flex-1 min-w-0">
-                  <p class="text-sm font-medium text-white mb-1">Marcus Rivera</p>
-                  <p class="text-sm text-gray-300">🚀 Product v2.1 deployed successfully!</p>
-                  <div class="flex items-center gap-4 mt-2 text-xs text-gray-400">
-                    <span>2 min ago</span>
-                    <div class="flex items-center gap-1">
-                      <i data-lucide="check-circle-2" class="w-3 h-3 text-green-400"></i>
-                      <span>CI/CD Pipeline</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="flex items-center justify-between text-xs text-gray-500 px-1">
-                <span class="flex items-center gap-1 hover:text-green-400 transition-colors duration-300">
-                  <i data-lucide="users" class="w-3 h-3"></i>
-                  <span>47 online</span>
-                </span>
-                <span class="flex items-center gap-1 hover:text-green-400 transition-colors duration-300">
-                  <i data-lucide="bell" class="w-3 h-3"></i>
-                  <span>3 mentions</span>
-                </span>
-              </div>
-            </div>
-            
-            <button class="w-full mt-4 px-4 py-2.5 bg-green-600/20 hover:bg-green-600/40 border border-green-500/30 hover:border-green-500/60 text-green-400 text-sm font-medium rounded-lg transition-all duration-300 flex items-center justify-center gap-2 hover:scale-105">
-              <i data-lucide="message-circle" class="w-4 h-4"></i>
-              Reply in Thread
-            </button>
+            <div class="text-4xl font-extrabold text-white mb-2 font-satoshi">₹4,999<span class="text-base font-medium text-brand-200">/mo</span></div>
+            <p class="text-brand-100 mb-6">Ideal for growing businesses increasing online reach/p>
+            <ul class="text-left space-y-3 mb-8">
+              <li class="flex items-center gap-2 text-white"><i data-lucide="check-circle" class="w-4 h-4 text-yellow-400"></i> Everything in Starter Plan</li>
+              <li class="flex items-center gap-2 text-white"><i data-lucide="check-circle" class="w-4 h-4 text-yellow-400"></i> Advanced Ads & Retargeting</li>
+              <li class="flex items-center gap-2 text-white"><i data-lucide="check-circle" class="w-4 h-4 text-yellow-400"></i> Advanced Analytics Dashboard (weekly updates)</li>
+              <li class="flex items-center gap-2 text-white"><i data-lucide="check-circle" class="w-4 h-4 text-yellow-400"></i>Instagram Growth Strategy</li>
+              <li class="flex items-center gap-2 text-white"><i data-lucide="check-circle" class="w-4 h-4 text-yellow-400"></i> Weekly Strategy Call</li>
+              <li class="flex items-center gap-2 text-white"><i data-lucide="check-circle" class="w-4 h-4 text-yellow-400"></i> Priority WhatsApp Support</li>
+            </ul>
+            <a href="#contact" class="mt-auto inline-block w-full py-3 rounded-xl bg-white text-brand-700 font-bold transition-all duration-300 shadow hover:bg-brand-100 hover:text-brand-900 hover:scale-105">Choose Growth</a>
           </div>
-
-          <!-- Analytics/ROI Card -->
-          <div class="animate-slide-up animate-delay-800 border-brand-500/30 hover:border-brand-500/60 hover-lift hover:shadow-2xl hover:shadow-brand-500/30 transition-all duration-500 text-center bg-gradient-to-t from-indigo-500/20 to-purple-600/10 hover:from-indigo-500/30 hover:to-purple-600/20 border rounded-2xl p-6 backdrop-blur-sm group">
-            <div class="flex gap-2 mb-6 items-center justify-start">
-              <div class="w-10 h-10 flex bg-gradient-to-br from-brand-500 to-purple-600 rounded-xl items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <i data-lucide="trending-up" class="w-5 h-5 text-white"></i>
-              </div>
-              <div class="text-left">
-                <h3 class="font-semibold text-white group-hover:text-brand-400 transition-colors duration-300">Productivity Impact</h3>
-                <p class="text-xs text-gray-400">Last 30 days</p>
-              </div>
+          
+          <!-- Premium Plan -->
+          <div class="animate-fade-in-right animate-delay-400 group 
+          hover-lift hover:border-purple-500/30 transition-all 
+          duration-500 hover:shadow-2xl hover:shadow-purple-500/20 
+          text-left border border-gray-700/50 rounded-2xl p-6 
+          backdrop-blur-sm bg-gray-900/30 hover:bg-gray-900/50">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-xl font-bold text-white font-satoshi">Premium</h3>
+              <span class="text-xs bg-purple-500/20 text-purple-400 px-2 py-1 rounded-full">Enterprise Ready</span>
             </div>
-            
-            <div class="space-y-4">
-              <div>
-                <div class="text-4xl lg:text-5xl font-bold font-satoshi text-white mb-1 group-hover:text-brand-400 transition-colors duration-500">92%</div>
-                <p class="text-sm text-gray-300">Time saved on manual tasks</p>
-              </div>
+            <div class="text-4xl font-extrabold text-purple-400 mb-2 font-satoshi">₹8,999<span class="text-base font-medium text-gray-400">/mo</span></div>
+            <p class="text-gray-400 mb-6">Best for businesses needing fast growth & personal attention</p>
+            <ul class="text-left space-y-3 mb-8">
+              <li class="flex items-center gap-2 text-gray-200"><i data-lucide="check-circle" class="w-4 h-4 text-purple-400"></i> Everything in Growth Plan</li>
+              <li class="flex items-center gap-2 text-gray-200"><i data-lucide="check-circle" class="w-4 h-4 text-purple-400"></i> Custom-designed Ad Graphics</li>
+              <li class="flex items-center gap-2 text-gray-200"><i data-lucide="check-circle" class="w-4 h-4 text-purple-400"></i> Premium Analytics Dashboard (real-time updates)</li>
+              <li class="flex items-center gap-2 text-gray-200"><i data-lucide="check-circle" class="w-4 h-4 text-purple-400"></i> Daily Ad Optimization & Monitoring</li>
+              <li class="flex items-center gap-2 text-gray-200"><i data-lucide="check-circle" class="w-4 h-4 text-purple-400"></i> Dedicated WhatsApp/Call Support</li>
+              <li class="flex items-center gap-2 text-gray-200"><i data-lucide="check-circle" class="w-4 h-4 text-purple-400"></i> Bi-weekly Strategy & Analytics Calls</li>
               
-              <div class="grid grid-cols-2 gap-4 text-center">
-                <div class="bg-white/5 hover:bg-white/10 rounded-lg p-3 transition-all duration-300 hover:scale-105">
-                  <div class="text-xl font-bold text-green-400">+31h</div>
-                  <p class="text-xs text-gray-400">Weekly savings</p>
-                </div>
-                <div class="bg-white/5 hover:bg-white/10 rounded-lg p-3 transition-all duration-300 hover:scale-105">
-                  <div class="text-xl font-bold text-blue-400">-67%</div>
-                  <p class="text-xs text-gray-400">Context switches</p>
-                </div>
-              </div>
-              
-              <div class="flex items-center justify-center gap-4 text-xs text-gray-400">
-                <span class="flex items-center gap-1 hover:text-yellow-400 transition-colors duration-300">
-                  <i data-lucide="clock" class="w-3 h-3 text-yellow-400"></i>
-                  Real-time tracking
-                </span>
-                <span class="flex items-center gap-1 hover:text-red-400 transition-colors duration-300">
-                  <i data-lucide="target" class="w-3 h-3 text-red-400"></i>
-                  Goal: 95%
-                </span>
-              </div>
-            </div>
+            </ul>
+            <a href="#contact" class="mt-auto flex justify-center mx-auto w-full py-3 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-semibold transition-all duration-300 shadow hover:shadow-purple-500/30 hover:scale-105"><p>Choose Premium</p></a>
           </div>
-
-           <!-- Slack Integration Card -->
-           <div class="animate-fade-in-left animate-delay-700 group hover-lift hover:border-green-500/30 transition-all duration-500 hover:shadow-2xl hover:shadow-green-500/20 text-left border border-gray-700/50 rounded-2xl p-6 backdrop-blur-sm bg-gray-900/30 hover:bg-gray-900/50">
-            <div class="flex items-center justify-between mb-6">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <i data-lucide="hash" class="w-5 h-5 text-white"></i>
-                </div>
-                <div>
-                  <h3 class="font-semibold text-white group-hover:text-green-400 transition-colors duration-300">Slack</h3>
-                  <p class="text-xs text-gray-400">#product-updates</p>
-                </div>
-              </div>
-              <div class="flex items-center gap-1">
-                <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                <span class="text-xs text-green-400 font-medium">Live</span>
-              </div>
+        </div>
+        
+        <!-- Additional Info -->
+        <div class="mt-12 lg:mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+          <div class="bg-gray-900/40 rounded-xl p-6 border border-gray-800 animate-fade-in-up animate-delay-500">
+            <div class="flex items-center gap-3 mb-3">
+              <i data-lucide="shield" class="w-6 h-6 text-green-400"></i>
+              <h4 class="text-lg font-semibold text-white">No Hidden Costs</h4>
             </div>
-            
-            <div class="space-y-3">
-              <div class="flex gap-3 bg-gray-700/20 border border-gray-800 rounded-lg p-3 hover:bg-gray-700/30 hover:border-gray-700 transition-all duration-300">
-                <div class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span class="text-xs font-bold text-white">M</span>
-                </div>
-                <div class="flex-1 min-w-0">
-                  <p class="text-sm font-medium text-white mb-1">Marcus Rivera</p>
-                  <p class="text-sm text-gray-300">🚀 Product v2.1 deployed successfully!</p>
-                  <div class="flex items-center gap-4 mt-2 text-xs text-gray-400">
-                    <span>2 min ago</span>
-                    <div class="flex items-center gap-1">
-                      <i data-lucide="check-circle-2" class="w-3 h-3 text-green-400"></i>
-                      <span>CI/CD Pipeline</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="flex items-center justify-between text-xs text-gray-500 px-1">
-                <span class="flex items-center gap-1 hover:text-green-400 transition-colors duration-300">
-                  <i data-lucide="users" class="w-3 h-3"></i>
-                  <span>47 online</span>
-                </span>
-                <span class="flex items-center gap-1 hover:text-green-400 transition-colors duration-300">
-                  <i data-lucide="bell" class="w-3 h-3"></i>
-                  <span>3 mentions</span>
-                </span>
-              </div>
-            </div>
-            
-            <button class="w-full mt-4 px-4 py-2.5 bg-green-600/20 hover:bg-green-600/40 border border-green-500/30 hover:border-green-500/60 text-green-400 text-sm font-medium rounded-lg transition-all duration-300 flex items-center justify-center gap-2 hover:scale-105">
-              <i data-lucide="message-circle" class="w-4 h-4"></i>
-              Reply in Thread
-            </button>
+            <p class="text-gray-400 text-sm">Transparent pricing with no surprise fees. You know exactly what you're paying for.</p>
           </div>
+          <div class="bg-gray-900/40 rounded-xl p-6 border border-gray-800 animate-fade-in-up animate-delay-600">
+            <div class="flex items-center gap-3 mb-3">
+              <i data-lucide="refresh-cw" class="w-6 h-6 text-blue-400"></i>
+              <h4 class="text-lg font-semibold text-white">Flexible Plans</h4>
+            </div>
+            <p class="text-gray-400 text-sm">Upgrade or downgrade anytime. We're here to grow with your business.</p>
+          </div>
+          <div class="bg-gray-900/40 rounded-xl p-6 border border-gray-800 animate-fade-in-up animate-delay-700">
+            <div class="flex items-center gap-3 mb-3">
+              <i data-lucide="headphones" class="w-6 h-6 text-purple-400"></i>
+              <h4 class="text-lg font-semibold text-white">24/7 Support</h4>
+            </div>
+            <p class="text-gray-400 text-sm">Get help whenever you need it. Our team is always ready to assist you.</p>
+          </div>
+        </div>
+        
+        <!-- CTA Section -->
+        <div class="mt-12 lg:mt-16 animate-fade-in-up animate-delay-800">
+          <p class="text-gray-300 mb-6">Still have questions? Let's talk about your specific needs.</p>
+          <a href="#contact" class="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 text-white font-semibold rounded-xl px-8 py-4 shadow-lg hover:shadow-xl hover:shadow-brand-500/25 hover:scale-105">
+            <span>Get Started Today</span>
+            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+          </a>
+        </div>
       </div>
     </section>
+
     <!-- About Us Section -->
     <section id="about" class="relative bg-gray-950 px-4 sm:px-6 lg:px-8 py-16 lg:py-24 border-t border-gray-800/50">
-      <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-3xl sm:text-4xl font-bold font-satoshi text-white mb-4 animate-fade-in-up animate-delay-200">About Us</h2>
-        <p class="text-lg text-gray-300 mb-8 animate-fade-in-up animate-delay-300">
-          <span class="font-semibold text-brand-400">SocialAdForge</span> is a cutting-edge digital marketing agency on a mission to help businesses grow and thrive in the digital age. We harness the power of <span class="font-semibold text-indigo-400">data-driven advertising strategies</span>—with a special focus on <span class="font-semibold text-purple-400">Meta Ads</span>—to deliver measurable results that matter.
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-          <div class="bg-gray-900/60 rounded-xl p-6 border border-gray-800 animate-fade-in-up animate-delay-400">
-            <h3 class="text-xl font-semibold text-white mb-2">Our Mission</h3>
-            <p class="text-gray-400">Empowering businesses to achieve sustainable growth through innovative, data-backed advertising campaigns that put people first.</p>
+      <!-- Background Elements -->
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-brand-900/10 via-transparent to-transparent"></div>
+      <div class="absolute top-1/4 right-1/4 w-32 h-32 sm:w-48 sm:h-48 lg:w-64 lg:h-64 bg-purple-500/5 rounded-full blur-3xl animate-pulse"></div>
+      <div class="absolute bottom-1/4 left-1/4 w-32 h-32 sm:w-48 sm:h-48 lg:w-64 lg:h-64 bg-brand-500/5 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+      
+      <div class="relative z-10 max-w-6xl mx-auto">
+        <div class="text-center mb-12 lg:mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold font-satoshi text-white mb-4 animate-fade-in-up animate-delay-200">About Us</h2>
+          <p class="text-lg text-gray-300 mb-8 animate-fade-in-up animate-delay-300 max-w-3xl mx-auto">
+            <span class="font-semibold text-brand-400">At SocialAdForge,</span> we help Kerala's local businesses grow online using smart and affordable digital marketing.<span class="font-semibold text-indigo-400">We specialize in Meta (Facebook & Instagram) Ads,</span> custom targeting, and result-driven campaigns — all handled with full transparency and simplicity. Whether you're just starting out or ready to scale, we're your <span class="font-semibold text-purple-400">trusted marketing partner.</span>
+          </p>
+        </div>
+        
+        <!-- Founder Profile Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <!-- Profile Photo & Info -->
+          <div class="text-center lg:text-left animate-fade-in-left animate-delay-400">
+            <div class="relative inline-block mb-8">
+              <!-- Circular Profile Photo -->
+              <div class="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 mx-auto lg:mx-0 relative">
+                <div class="w-full h-full rounded-full bg-gradient-to-br from-brand-500 to-purple-600 p-1 shadow-2xl">
+                  <div class="w-full h-full rounded-full bg-gray-900 flex items-center justify-center overflow-hidden">
+                    <!-- Replace this div with your actual image -->
+                    <div class="w-full h-full bg-gradient-to-br from-gray-700 to-gray-800 flex items-center justify-center">
+                      <i data-lucide="user" class="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 text-gray-400"></i>
+                    </div>
+                    <!-- Uncomment and replace with your image:
+                    <img src="path-to-your-image.jpg" alt="Salmanul Faris" class="w-full h-full object-cover rounded-full">
+                    -->
+                  </div>
+                </div>
+                <!-- Decorative Elements -->
+                <div class="absolute -top-2 -right-2 w-6 h-6 bg-green-400 rounded-full animate-pulse"></div>
+                <div class="absolute -bottom-2 -left-2 w-4 h-4 bg-purple-400 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
+              </div>
+            </div>
+            
+            <!-- Name and Title -->
+            <div class="mb-6">
+              <h3 class="text-2xl sm:text-3xl font-bold text-white mb-2 font-satoshi">Salmanul Faris</h3>
+              <p class="text-lg text-brand-400 font-medium">Founder of SocialAdForge</p>
+            </div>
+            
+            <!-- About Text -->
+            <div class="bg-gray-900/60 rounded-2xl p-6 border border-gray-800 backdrop-blur-sm">
+              <p class="text-gray-300 leading-relaxed">
+                I started<span class="font-semibold text-brand-400">SocialAdForge</span> to support Kerala's small businesses with smart and affordable digital marketing. We use proven strategies and tools to help you grow — with simple, result-focused service.
+              </p>
+            </div>
           </div>
-          <div class="bg-gray-900/60 rounded-xl p-6 border border-gray-800 animate-fade-in-up animate-delay-500">
-            <h3 class="text-xl font-semibold text-white mb-2">Human-First Approach</h3>
-            <p class="text-gray-400">We believe in the power of human connection. Our team blends advanced analytics with creativity and empathy, ensuring every campaign resonates with real people.</p>
-          </div>
-          <div class="bg-gray-900/60 rounded-xl p-6 border border-gray-800 animate-fade-in-up animate-delay-600">
-            <h3 class="text-xl font-semibold text-white mb-2">Experience & Trust</h3>
-            <p class="text-gray-400">With years of experience and a passion for innovation, SocialAdForge is a trusted partner for brands seeking transparency, results, and a forward-thinking edge in digital marketing.</p>
+          
+          <!-- Additional Info Cards -->
+          <div class="space-y-6 animate-fade-in-right animate-delay-500">
+            <div class="bg-gray-900/60 rounded-2xl p-6 border border-gray-800 backdrop-blur-sm hover:border-brand-500/30 transition-all duration-300">
+              <div class="flex items-center gap-4 mb-4">
+                <div class="w-12 h-12 bg-gradient-to-br from-brand-500 to-purple-600 rounded-xl flex items-center justify-center">
+                  <i data-lucide="target" class="w-6 h-6 text-white"></i>
+                </div>
+                <h4 class="text-xl font-semibold text-white">Personal Touch</h4>
+              </div>
+              <p class="text-gray-300">Every campaign is personally managed by me, ensuring you get direct access to strategy decisions and real-time optimizations.</p>
+            </div>
+            
+            <div class="bg-gray-900/60 rounded-2xl p-6 border border-gray-800 backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300">
+              <div class="flex items-center gap-4 mb-4">
+                <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center">
+                  <i data-lucide="trending-up" class="w-6 h-6 text-white"></i>
+                </div>
+                <h4 class="text-xl font-semibold text-white">Proven Results</h4>
+              </div>
+              <p class="text-gray-300">Focus on measurable outcomes with transparent reporting and data-driven strategies that deliver actual business growth.</p>
+            </div>
+            
+            <div class="bg-gray-900/60 rounded-2xl p-6 border border-gray-800 backdrop-blur-sm hover:border-green-500/30 transition-all duration-300">
+              <div class="flex items-center gap-4 mb-4">
+                <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-600 rounded-xl flex items-center justify-center">
+                  <i data-lucide="heart" class="w-6 h-6 text-white"></i>
+                </div>
+                <h4 class="text-xl font-semibold text-white">Local Focus</h4>
+              </div>
+              <p class="text-gray-300">Deep understanding of Kerala's business landscape and cultural nuances to create campaigns that truly resonate with your audience.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -402,47 +400,6 @@
         </div>
       </div>
     </section>
-    <!-- Why Choose Us Section -->
-    <section id="why-choose-us" class="relative bg-gray-950 px-4 sm:px-6 lg:px-8 py-16 lg:py-24 border-t border-gray-800/50">
-      <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-3xl sm:text-4xl font-bold font-satoshi text-white mb-4 animate-fade-in-up animate-delay-200">Why Choose Us</h2>
-        <p class="text-lg text-gray-300 mb-12 animate-fade-in-up animate-delay-300">We put your growth first — with full transparency, measurable results, and a creative edge.</p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 text-left">
-          <!-- ROI-Focused Campaigns -->
-          <div class="flex items-start gap-4 bg-gray-900/60 rounded-xl p-6 border border-gray-800 animate-fade-in-up animate-delay-400">
-            <span class="text-brand-400 text-3xl">🎯</span>
-            <div>
-              <h3 class="text-lg font-semibold text-white mb-1">ROI-Focused Campaigns</h3>
-              <p class="text-gray-400">Every rupee you invest should bring you results — that’s our core belief.</p>
-            </div>
-          </div>
-          <!-- Data + Creativity -->
-          <div class="flex items-start gap-4 bg-gray-900/60 rounded-xl p-6 border border-gray-800 animate-fade-in-up animate-delay-500">
-            <span class="text-blue-400 text-3xl">📈</span>
-            <div>
-              <h3 class="text-lg font-semibold text-white mb-1">Data + Creativity</h3>
-              <p class="text-gray-400">We don’t just guess — we test, optimize, and scale.</p>
-            </div>
-          </div>
-          <!-- Transparent Process -->
-          <div class="flex items-start gap-4 bg-gray-900/60 rounded-xl p-6 border border-gray-800 animate-fade-in-up animate-delay-600">
-            <span class="text-green-400 text-3xl">🤝</span>
-            <div>
-              <h3 class="text-lg font-semibold text-white mb-1">Transparent Process</h3>
-              <p class="text-gray-400">Clear reporting. No hidden costs. You’re always in control.</p>
-            </div>
-          </div>
-          <!-- Startup-Friendly Plans -->
-          <div class="flex items-start gap-4 bg-gray-900/60 rounded-xl p-6 border border-gray-800 animate-fade-in-up animate-delay-700">
-            <span class="text-yellow-400 text-3xl">💡</span>
-            <div>
-              <h3 class="text-lg font-semibold text-white mb-1">Startup-Friendly Plans</h3>
-              <p class="text-gray-400">Designed for growing brands without breaking the bank.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     <!-- Contact Section -->
     <section id="contact" class="relative bg-gray-950 px-4 sm:px-6 lg:px-8 py-16 lg:py-24 border-t border-gray-800/50">
       <!-- Background Elements -->
@@ -454,62 +411,9 @@
         <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold font-satoshi text-white mb-4 animate-fade-in-up animate-delay-200">Contact Us</h2>
         <p class="text-base sm:text-lg text-gray-300 mb-8 lg:mb-12 animate-fade-in-up animate-delay-300 max-w-2xl mx-auto">Ready to grow your business? Reach out and let's talk strategy.</p>
         
-        <div class="grid grid-cols-1 xl:grid-cols-2 gap-6 lg:gap-8 xl:gap-12">
-          <!-- Contact Info -->
-          <div class="text-left animate-fade-in-left animate-delay-400 order-2 xl:order-1">
-            <div class="bg-gray-900/60 rounded-xl lg:rounded-2xl p-6 sm:p-8 border border-gray-800 backdrop-blur-sm">
-              <h3 class="text-xl sm:text-2xl font-bold font-satoshi text-white mb-6">Let's Connect</h3>
-              <div class="space-y-4 sm:space-y-6">
-                <div class="flex items-center gap-3 sm:gap-4 group">
-                  <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-brand-500 to-purple-600 rounded-lg sm:rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                    <i data-lucide="message-circle" class="w-5 h-5 sm:w-6 sm:h-6 text-white"></i>
-                  </div>
-                  <div class="min-w-0 flex-1">
-                    <h4 class="text-base sm:text-lg font-semibold text-white mb-1">WhatsApp</h4>
-                    <p class="text-sm sm:text-base text-gray-400 truncate">+91 98765 43210</p>
-                  </div>
-                </div>
-                
-                <div class="flex items-center gap-3 sm:gap-4 group">
-                  <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-lg sm:rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                    <i data-lucide="mail" class="w-5 h-5 sm:w-6 sm:h-6 text-white"></i>
-                  </div>
-                  <div class="min-w-0 flex-1">
-                    <h4 class="text-base sm:text-lg font-semibold text-white mb-1">Email</h4>
-                    <p class="text-sm sm:text-base text-gray-400 truncate">contact@socialadforge.com</p>
-                  </div>
-                </div>
-                
-                <div class="flex items-center gap-3 sm:gap-4 group">
-                  <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg sm:rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                    <i data-lucide="map-pin" class="w-5 h-5 sm:w-6 sm:h-6 text-white"></i>
-                  </div>
-                  <div class="min-w-0 flex-1">
-                    <h4 class="text-base sm:text-lg font-semibold text-white mb-1">Location</h4>
-                    <p class="text-sm sm:text-base text-gray-400 truncate">Kerala, India</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-gray-800">
-                <h4 class="text-base sm:text-lg font-semibold text-white mb-4">Follow Us</h4>
-                <div class="flex gap-3 sm:gap-4">
-                  <a href="#" class="w-9 h-9 sm:w-10 sm:h-10 bg-gray-800/50 hover:bg-brand-500/20 border border-gray-700 hover:border-brand-500/50 rounded-lg flex items-center justify-center text-gray-400 hover:text-brand-400 transition-all duration-300 hover:scale-110">
-                    <i data-lucide="instagram" class="w-4 h-4 sm:w-5 sm:h-5"></i>
-                  </a>
-                  <a href="#" class="w-9 h-9 sm:w-10 sm:h-10 bg-gray-800/50 hover:bg-blue-500/20 border border-gray-700 hover:border-blue-500/50 rounded-lg flex items-center justify-center text-gray-400 hover:text-blue-400 transition-all duration-300 hover:scale-110">
-                    <i data-lucide="facebook" class="w-4 h-4 sm:w-5 sm:h-5"></i>
-                  </a>
-                  <a href="#" class="w-9 h-9 sm:w-10 sm:h-10 bg-gray-800/50 hover:bg-blue-400/20 border border-gray-700 hover:border-blue-400/50 rounded-lg flex items-center justify-center text-gray-400 hover:text-blue-400 transition-all duration-300 hover:scale-110">
-                    <i data-lucide="linkedin" class="w-4 h-4 sm:w-5 sm:h-5"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          
+        <div class="flex justify-center">
           <!-- Contact Form -->
-          <div class="animate-fade-in-right animate-delay-500 order-1 xl:order-2">
+          <div class="animate-fade-in-right animate-delay-500 w-full max-w-xl">
             <form class="bg-gray-900/60 rounded-xl lg:rounded-2xl p-6 sm:p-8 border border-gray-800 backdrop-blur-sm flex flex-col gap-4 sm:gap-6 hover:border-gray-700/50 transition-all duration-300" action="https://formspree.io/f/xkgbdwjw" method="POST">
               <input type="hidden" name="form-name" value="contact">
               
@@ -533,7 +437,7 @@
                 <label for="message" class="text-gray-400 font-medium text-sm mb-2 block">Message</label>
                 <div class="relative">
                   <i data-lucide="message-square" class="absolute left-3 sm:left-4 top-3 sm:top-4 w-4 h-4 sm:w-5 sm:h-5 text-gray-500 group-focus-within:text-brand-400 transition-colors duration-300"></i>
-                  <textarea id="message" name="message" rows="4" sm:rows="5" required class="w-full bg-gray-800/70 border border-gray-700 rounded-lg sm:rounded-xl px-3 sm:px-4 py-3 sm:py-4 pl-10 sm:pl-12 text-sm sm:text-base text-white focus:ring-2 focus:ring-brand-500 focus:border-brand-500 focus:outline-none placeholder-gray-500 transition-all duration-300 hover:bg-gray-800/90 hover:border-gray-600 resize-none" placeholder="How can we help you?"></textarea>
+                  <textarea id="message" name="message" rows="4" sm:rows="5" class="w-full bg-gray-800/70 border border-gray-700 rounded-lg sm:rounded-xl px-3 sm:px-4 py-3 sm:py-4 pl-10 sm:pl-12 text-sm sm:text-base text-white focus:ring-2 focus:ring-brand-500 focus:border-brand-500 focus:outline-none placeholder-gray-500 transition-all duration-300 hover:bg-gray-800/90 hover:border-gray-600 resize-none" placeholder="How can we help you?"></textarea>
                 </div>
               </div>
               
@@ -562,8 +466,8 @@
           <span class="font-semibold text-white mb-1">Quick Links</span>
           <a href="#home" class="hover:text-brand-400 transition-colors">Home</a>
           <a href="#about" class="hover:text-brand-400 transition-colors">About</a>
+          <a href="#pricing" class="hover:text-brand-400 transition-colors">Pricing</a>
           <a href="#services" class="hover:text-brand-400 transition-colors">Services</a>
-          <a href="#why-choose-us" class="hover:text-brand-400 transition-colors">Why Choose Us</a>
           <a href="#contact" class="hover:text-brand-400 transition-colors">Contact</a>
         </div>
         <!-- Right: Social Media -->
