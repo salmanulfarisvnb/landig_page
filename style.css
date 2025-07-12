@@ -1,0 +1,69 @@
+/* Animation delays */
+.animate-delay-100 { animation-delay: 0.1s; }
+.animate-delay-200 { animation-delay: 0.2s; }
+.animate-delay-300 { animation-delay: 0.3s; }
+.animate-delay-400 { animation-delay: 0.4s; }
+.animate-delay-500 { animation-delay: 0.5s; }
+.animate-delay-600 { animation-delay: 0.6s; }
+.animate-delay-700 { animation-delay: 0.7s; }
+.animate-delay-800 { animation-delay: 0.8s; }
+
+[class*="animate-"] {
+  opacity: 0;
+}
+
+/* Hover lift effect */
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* Hover glow effect */
+.hover-glow:hover {
+  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
+}
+
+/* Inline style replacements */
+.absolute.bottom-0.right-1\/4.w-96.h-96.bg-purple-500\/10.rounded-full.blur-3xl.animate-pulse {
+  animation-delay: 1s;
+}
+
+/* Toast animations */
+.custom-toast {
+  animation: slideInRight 0.5s ease-out forwards;
+}
+
+.custom-toast.animate-slide-up {
+  animation: slideInRight 0.5s ease-out forwards;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Toast hover effects */
+.custom-toast:hover {
+  transform: translateX(-4px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(99, 102, 241, 0.4);
+}
+
+/* Loading spinner animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+} 
