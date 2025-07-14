@@ -83,3 +83,17 @@
 .animate-spin {
   animation: spin 1s linear infinite;
 }
+
+#mobile-menu-overlay {
+  opacity: 0;
+  pointer-events: auto;
+  background: rgba(20, 20, 20, 0.95); /* More solid dark background */
+  z-index: 49;
+  transition: opacity 0.3s;
+}
+#mobile-menu-overlay[style*="display: block"] {
+  opacity: 1;
+}
+#mobile-menu {
+  z-index: 50;
+}
