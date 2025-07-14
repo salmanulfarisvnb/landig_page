@@ -95,6 +95,7 @@ function showToast(message, type = "success") {
 
 // Form submission handling
 document.addEventListener("DOMContentLoaded", function () {
+  // Existing observer for fade-in
   const animatedElements = document.querySelectorAll('[class*="animate-"]');
   animatedElements.forEach((el) => observer.observe(el));
 
@@ -106,6 +107,74 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     card.addEventListener("mouseleave", function () {
       this.style.zIndex = "auto";
+    });
+  });
+
+  // --- Section Slide/Fade Animations ---
+  const sectionSelectors = [
+    "#home",
+    "#pricing",
+    "#about",
+    "#services",
+    "#contact",
+  ];
+  sectionSelectors.forEach((selector, idx) => {
+    const section = document.querySelector(selector);
+    if (section) {
+      section.classList.add("scroll-animate-section");
+      section.style.opacity = "0";
+      section.style.transform = `translateY(${40 + idx * 10}px)`;
+    }
+  });
+
+  const sectionObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.transition =
+            "opacity 0.9s cubic-bezier(0.4,0,0.2,1), transform 1.1s cubic-bezier(0.4,0,0.2,1)";
+          entry.target.style.opacity = "1";
+          entry.target.style.transform = "translateY(0)";
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  document.querySelectorAll(".scroll-animate-section").forEach((section) => {
+    sectionObserver.observe(section);
+  });
+
+  // --- Animate images and text inside sections ---
+  const slideInElements = document.querySelectorAll(".slide-in-on-scroll");
+  slideInElements.forEach((el, i) => {
+    el.style.opacity = "0";
+    el.style.transform = i % 2 === 0 ? "translateX(-60px)" : "translateX(60px)";
+  });
+  const slideInObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.transition =
+            "opacity 0.8s cubic-bezier(0.4,0,0.2,1), transform 1s cubic-bezier(0.4,0,0.2,1)";
+          entry.target.style.opacity = "1";
+          entry.target.style.transform = "translateX(0)";
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+  document
+    .querySelectorAll(".slide-in-on-scroll")
+    .forEach((el) => slideInObserver.observe(el));
+
+  // --- Parallax backgrounds ---
+  const parallaxEls = document.querySelectorAll(".parallax-bg");
+  window.addEventListener("scroll", function () {
+    const scrollY = window.scrollY;
+    parallaxEls.forEach((el, i) => {
+      const speed = el.getAttribute("data-parallax-speed") || 0.2 + i * 0.05;
+      el.style.transform = `translateY(${scrollY * speed}px)`;
     });
   });
 

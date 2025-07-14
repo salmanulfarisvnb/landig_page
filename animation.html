@@ -1,0 +1,335 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Mode Hero with Wave Animation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .wave-container {
+        position: relative;
+        overflow: hidden;
+      }
+      .wave-container canvas {
+        width: 100% !important;
+        height: 100% !important;
+        display: block;
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=IBM+Plex+Serif:wght@300;400;500;600;700&amp;family=IBM+Plex+Mono:wght@300;400;500;600;700&amp;family=Inter&amp;display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-900 font-['Inter'] overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="absolute top-0 w-full z-30 p-6">
+      <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <div class="text-xl font-medium text-white tracking-tighter">AURA</div>
+        <div class="hidden md:flex space-x-8 text-gray-300">
+          <a href="#" class="hover:text-white transition-colors">Features</a>
+          <a href="#" class="hover:text-white transition-colors">About</a>
+          <a href="#" class="hover:text-white transition-colors">Contact</a>
+        </div>
+        <button class="md:hidden text-white">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen overflow-hidden bg-gray-900">
+      <!-- Wave Animation Background -->
+      <div class="wave-container absolute inset-0">
+        <canvas
+          id="canvas"
+          class="w-full h-full"
+          width="1113"
+          height="1052"
+        ></canvas>
+      </div>
+
+      <!-- Dark overlay for better text readability -->
+      <div class="absolute inset-0 bg-gray-900/40"></div>
+
+      <!-- Hero Content -->
+      <div
+        class="relative z-20 flex items-center justify-center min-h-screen px-6"
+      >
+        <div class="max-w-5xl mx-auto text-center">
+          <!-- Badge -->
+          <div
+            class="inline-flex items-center text-xs text-gray-300 bg-gray-800/60 border-gray-700/50 border rounded-full mb-8 pt-1 pr-3 pb-1 pl-3 backdrop-blur-sm"
+          >
+            Now in Beta
+          </div>
+
+          <!-- Main Heading -->
+          <h1
+            class="md:text-7xl lg:text-8xl leading-tight text-5xl font-bold text-white tracking-tighter mb-6 pt-0 pb-0"
+          >
+            Create<span
+              class="block bg-clip-text text-transparent bg-gradient-to-br from-pink-500 via-rose-500 to-cyan-500 pb-2"
+              >Beautiful Designs</span
+            >
+          </h1>
+
+          <!-- Subheading -->
+          <p
+            class="md:text-2xl max-w-3xl leading-relaxed text-xl text-gray-300 mr-auto mb-12 ml-auto"
+          >
+            Immerse yourself in a world where technology meets artistry. Create,
+            collaborate, and innovate with tools that adapt to your vision.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div
+            class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
+          >
+            <button
+              class="transition-all duration-200 transform hover:scale-105 shadow-red-500/25 font-semibold text-white bg-gradient-to-br from-pink-500 via-rose-500 to-cyan-500 rounded-lg pt-4 pr-8 pb-4 pl-8 shadow-lg"
+            >
+              Start Free Trial
+            </button>
+            <button
+              class="px-8 py-4 bg-gray-800/60 backdrop-blur-sm border border-gray-700/50 text-white font-semibold rounded-lg hover:bg-gray-700/60 transition-all duration-200"
+            >
+              Watch Demo
+            </button>
+          </div>
+
+          <!-- Features Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div
+              class="hover:bg-gray-700/40 transition-all duration-300 text-center bg-gray-800/30 border-gray-700/30 border rounded-xl pt-6 pr-6 pb-6 pl-6 backdrop-blur-sm"
+            >
+              <div
+                class="w-12 h-12 flex items-center justify-center bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg mb-4 mx-auto"
+              >
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-white font-semibold text-lg mb-2">
+                Lightning Fast
+              </h3>
+              <p class="text-gray-400 text-sm">
+                Experience unprecedented speed with our optimized
+                infrastructure.
+              </p>
+            </div>
+
+            <div
+              class="bg-gray-800/30 backdrop-blur-sm border border-gray-700/30 rounded-xl p-6 hover:bg-gray-700/40 transition-all duration-300"
+            >
+              <div
+                class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg mb-4 flex items-center justify-center mx-auto"
+              >
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-white font-semibold text-lg mb-2">
+                Secure &amp; Reliable
+              </h3>
+              <p class="text-gray-400 text-sm">
+                Built with enterprise-grade security and 99.9% uptime guarantee.
+              </p>
+            </div>
+
+            <div
+              class="bg-gray-800/30 backdrop-blur-sm border border-gray-700/30 rounded-xl p-6 hover:bg-gray-700/40 transition-all duration-300"
+            >
+              <div
+                class="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg mb-4 flex items-center justify-center mx-auto"
+              >
+                <svg
+                  class="w-6 h-6 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-white font-semibold text-lg mb-2">
+                User Focused
+              </h3>
+              <p class="text-gray-400 text-sm">
+                Designed with intuitive interfaces that users love to interact
+                with.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
+        <div class="flex flex-col items-center text-gray-400">
+          <span class="text-sm mb-2">Scroll to explore</span>
+          <div
+            class="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center"
+          >
+            <div
+              class="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-bounce"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const canvas = document.getElementById("canvas");
+      const ctx = canvas.getContext("2d");
+
+      let width, height, imageData, data;
+      const SCALE = 2;
+
+      function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        width = Math.floor(canvas.width / SCALE);
+        height = Math.floor(canvas.height / SCALE);
+        imageData = ctx.createImageData(width, height);
+        data = imageData.data;
+      }
+
+      window.addEventListener("resize", resizeCanvas);
+      resizeCanvas();
+
+      let startTime = Date.now();
+
+      const SIN_TABLE = new Float32Array(1024);
+      const COS_TABLE = new Float32Array(1024);
+      for (let i = 0; i < 1024; i++) {
+        const angle = (i / 1024) * Math.PI * 2;
+        SIN_TABLE[i] = Math.sin(angle);
+        COS_TABLE[i] = Math.cos(angle);
+      }
+
+      function fastSin(x) {
+        const index =
+          Math.floor(((x % (Math.PI * 2)) / (Math.PI * 2)) * 1024) & 1023;
+        return SIN_TABLE[index];
+      }
+
+      function fastCos(x) {
+        const index =
+          Math.floor(((x % (Math.PI * 2)) / (Math.PI * 2)) * 1024) & 1023;
+        return COS_TABLE[index];
+      }
+
+      function render() {
+        const time = (Date.now() - startTime) * 0.001;
+
+        for (let y = 0; y < height; y++) {
+          for (let x = 0; x < width; x++) {
+            const u_x = (2 * x - width) / height;
+            const u_y = (2 * y - height) / height;
+
+            let a = 0;
+            let d = 0;
+
+            for (let i = 0; i < 4; i++) {
+              a += fastCos(i - d + time * 0.5 - a * u_x);
+              d += fastSin(i * u_y + a);
+            }
+
+            // Dark theme color palette: deep blues, purples, and grays
+            const wave = (fastSin(a) + fastCos(d)) * 0.5;
+            const intensity = 0.3 + 0.4 * wave;
+
+            // Dark base with blue/purple accents
+            const baseVal = 0.1 + 0.15 * fastCos(u_x + u_y + time * 0.3);
+
+            // Blue and purple wave accents
+            const blueAccent = 0.2 * fastSin(a * 1.5 + time * 0.2);
+            const purpleAccent = 0.15 * fastCos(d * 2 + time * 0.1);
+
+            const r =
+              Math.max(0, Math.min(1, baseVal + purpleAccent * 0.8)) *
+              intensity;
+            const g =
+              Math.max(0, Math.min(1, baseVal + blueAccent * 0.6)) * intensity;
+            const b =
+              Math.max(
+                0,
+                Math.min(1, baseVal + blueAccent * 1.2 + purpleAccent * 0.4)
+              ) * intensity;
+
+            const finalR = r * 255;
+            const finalG = g * 255;
+            const finalB = b * 255;
+
+            const index = (y * width + x) * 4;
+            data[index] = finalR;
+            data[index + 1] = finalG;
+            data[index + 2] = finalB;
+            data[index + 3] = 255;
+          }
+        }
+
+        ctx.putImageData(imageData, 0, 0);
+        if (SCALE > 1) {
+          ctx.imageSmoothingEnabled = false;
+          ctx.drawImage(
+            canvas,
+            0,
+            0,
+            width,
+            height,
+            0,
+            0,
+            canvas.width,
+            canvas.height
+          );
+        }
+
+        requestAnimationFrame(render);
+      }
+
+      render();
+    </script>
+  </body>
+</html>
