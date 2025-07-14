@@ -146,12 +146,15 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // --- Animate images and text inside sections ---
-  const slideInElements = document.querySelectorAll(".slide-in-on-scroll");
-  slideInElements.forEach((el, i) => {
+  // Enhanced: alternate direction for service cards
+  const serviceCards = document.querySelectorAll(
+    "#services .slide-in-on-scroll"
+  );
+  serviceCards.forEach((el, i) => {
     el.style.opacity = "0";
     el.style.transform = i % 2 === 0 ? "translateX(-60px)" : "translateX(60px)";
   });
-  const slideInObserver = new IntersectionObserver(
+  const serviceCardObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -164,9 +167,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     { threshold: 0.15 }
   );
-  document
-    .querySelectorAll(".slide-in-on-scroll")
-    .forEach((el) => slideInObserver.observe(el));
+  serviceCards.forEach((el) => serviceCardObserver.observe(el));
 
   // --- Parallax backgrounds ---
   const parallaxEls = document.querySelectorAll(".parallax-bg");
