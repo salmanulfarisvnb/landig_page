@@ -169,6 +169,29 @@
       
       <div class="relative z-10 max-w-6xl mx-auto text-center">
         <h2 class="text-3xl sm:text-4xl font-bold font-satoshi text-white mb-4 animate-fade-in-up animate-delay-200">Choose your Plan</h2>
+        
+        <!-- Toggle Switch for Weekly/Monthly -->
+        <div class="flex justify-center items-center gap-4 mt-8 mb-8" aria-label="Billing period toggle">
+          <span id="label-weekly" class="text-sm font-medium text-white transition-colors duration-300" aria-hidden="true">Weekly</span>
+          <button 
+            id="billing-toggle"
+            type="button"
+            role="switch"
+            aria-checked="false"
+            aria-labelledby="label-weekly label-monthly"
+            class="relative inline-flex h-8 w-16 rounded-full bg-gray-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-brand-500"
+          >
+            <span class="sr-only">Toggle billing period</span>
+            <span
+              id="toggle-knob"
+              class="inline-block h-7 w-7 rounded-full bg-white shadow transform transition-transform duration-300 translate-x-1"
+              aria-hidden="true"
+            ></span>
+            <!-- Visual indicator for checked state will be handled by JS -->
+          </button>
+          <span id="label-monthly" class="text-sm font-medium text-gray-400 transition-colors duration-300" aria-hidden="true">Monthly</span>
+        </div>
+
         <!-- Interactive Demo Cards -->
         <div class="mt-12 lg:mt-16 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
           <!-- Starter Plan -->
@@ -181,7 +204,10 @@
               <h3 class="text-xl font-bold text-white font-satoshi">Starter</h3>
               <span class="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded-full">Perfect for small/local businesses starting digital ads</span>
             </div>
-            <div class="text-4xl font-extrabold text-brand-400 mb-2 font-satoshi">₹2,999<span class="text-base font-medium text-gray-400">/mo</span></div>
+            <div class="text-4xl font-extrabold text-brand-400 mb-2 font-satoshi">
+              <span class="plan-price transition-all duration-500" data-weekly="₹749" data-monthly="₹2,999">₹749</span>
+              <span class="text-base font-medium text-gray-400 plan-period transition-all duration-500">/wk</span>
+            </div>
             <p class="text-gray-400 mb-6">Perfect for small businesses starting with digital ads</p>
             <ul class="text-left space-y-3 mb-8">
               <li class="flex items-center gap-2 text-gray-200"><i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i>  Meta (Facebook & Instagram) Ads Setup</li>
@@ -199,8 +225,11 @@
               <h3 class="text-xl font-bold text-white font-satoshi">Growth</h3>
               <span class="text-xs bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded-full">Best Value</span>
             </div>
-            <div class="text-4xl font-extrabold text-white mb-2 font-satoshi">₹4,999<span class="text-base font-medium text-brand-200">/mo</span></div>
-            <p class="text-brand-100 mb-6">Ideal for growing businesses increasing online reach/p>
+            <div class="text-4xl font-extrabold text-white mb-2 font-satoshi">
+              <span class="plan-price transition-all duration-500" data-weekly="₹1,249" data-monthly="₹4,999">₹1,249</span>
+              <span class="text-base font-medium text-brand-200 plan-period transition-all duration-500">/wk</span>
+            </div>
+            <p class="text-brand-100 mb-6">Ideal for growing businesses increasing online reach</p>
             <ul class="text-left space-y-3 mb-8">
               <li class="flex items-center gap-2 text-white"><i data-lucide="check-circle" class="w-4 h-4 text-yellow-400"></i> Everything in Starter Plan</li>
               <li class="flex items-center gap-2 text-white"><i data-lucide="check-circle" class="w-4 h-4 text-yellow-400"></i> Advanced Ads & Retargeting</li>
@@ -222,7 +251,10 @@
               <h3 class="text-xl font-bold text-white font-satoshi">Premium</h3>
               <span class="text-xs bg-purple-500/20 text-purple-400 px-2 py-1 rounded-full">Enterprise Ready</span>
             </div>
-            <div class="text-4xl font-extrabold text-purple-400 mb-2 font-satoshi">₹8,999<span class="text-base font-medium text-gray-400">/mo</span></div>
+            <div class="text-4xl font-extrabold text-purple-400 mb-2 font-satoshi">
+              <span class="plan-price transition-all duration-500" data-weekly="₹2,249" data-monthly="₹8,999">₹2,249</span>
+              <span class="text-base font-medium text-gray-400 plan-period transition-all duration-500">/wk</span>
+            </div>
             <p class="text-gray-400 mb-6">Best for businesses needing fast growth & personal attention</p>
             <ul class="text-left space-y-3 mb-8">
               <li class="flex items-center gap-2 text-gray-200"><i data-lucide="check-circle" class="w-4 h-4 text-purple-400"></i> Everything in Growth Plan</li>
@@ -231,7 +263,6 @@
               <li class="flex items-center gap-2 text-gray-200"><i data-lucide="check-circle" class="w-4 h-4 text-purple-400"></i> Daily Ad Optimization & Monitoring</li>
               <li class="flex items-center gap-2 text-gray-200"><i data-lucide="check-circle" class="w-4 h-4 text-purple-400"></i> Dedicated WhatsApp/Call Support</li>
               <li class="flex items-center gap-2 text-gray-200"><i data-lucide="check-circle" class="w-4 h-4 text-purple-400"></i> Bi-weekly Strategy & Analytics Calls</li>
-              
             </ul>
             <a href="#contact" class="mt-auto flex justify-center mx-auto w-full py-3 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-semibold transition-all duration-300 shadow hover:shadow-purple-500/30 hover:scale-105"><p>Choose Premium</p></a>
           </div>
@@ -271,6 +302,67 @@
           </a>
         </div>
       </div>
+      <script>
+        // Accessible toggle for weekly/monthly pricing
+        (function() {
+          const toggle = document.getElementById('billing-toggle');
+          const knob = document.getElementById('toggle-knob');
+          const weeklyLabel = document.getElementById('label-weekly');
+          const monthlyLabel = document.getElementById('label-monthly');
+          const prices = document.querySelectorAll('.plan-price');
+          const periods = document.querySelectorAll('.plan-period');
+          let isWeekly = true;
+
+          function updatePrices() {
+            prices.forEach(function(price) {
+              price.textContent = isWeekly ? price.getAttribute('data-weekly') : price.getAttribute('data-monthly');
+            });
+            periods.forEach(function(period) {
+              if (isWeekly) {
+                period.textContent = '/wk';
+                period.classList.remove('text-gray-400');
+                period.classList.add('text-brand-200');
+              } else {
+                period.textContent = '/mo';
+                period.classList.remove('text-brand-200');
+                period.classList.add('text-gray-400');
+              }
+            });
+            // Animate knob
+            knob.style.transform = isWeekly ? 'translateX(0.25rem)' : 'translateX(2.25rem)';
+            // Update aria-checked
+            toggle.setAttribute('aria-checked', !isWeekly);
+            // Update label colors
+            if (isWeekly) {
+              weeklyLabel.classList.remove('text-gray-400');
+              weeklyLabel.classList.add('text-white');
+              monthlyLabel.classList.remove('text-white');
+              monthlyLabel.classList.add('text-gray-400');
+            } else {
+              weeklyLabel.classList.remove('text-white');
+              weeklyLabel.classList.add('text-gray-400');
+              monthlyLabel.classList.remove('text-gray-400');
+              monthlyLabel.classList.add('text-white');
+            }
+          }
+
+          toggle.addEventListener('click', function() {
+            isWeekly = !isWeekly;
+            updatePrices();
+          });
+
+          toggle.addEventListener('keydown', function(e) {
+            if (e.key === ' ' || e.key === 'Enter') {
+              e.preventDefault();
+              isWeekly = !isWeekly;
+              updatePrices();
+            }
+          });
+
+          // Initialize
+          updatePrices();
+        })();
+      </script>
     </section>
 
     <!-- About Us Section -->
